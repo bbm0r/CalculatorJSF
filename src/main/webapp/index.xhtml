@@ -3,10 +3,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Calculator</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h1>Calculator</h1>
+        <h:form>
+            <div style="background-color: orangered">               
+                <h:outputLabel value="Integer 1:"/>   
+                <h:inputText value="#{calculator.s1}"/>
+            </div>
+            <div style="background-color: orangered">               
+                <h:outputLabel value="Integer 2:"/>   
+                <h:inputText value="#{calculator.s2}"/>
+            </div>
+            <div>
+                <h:commandButton value="Add" action="#{calculator.topla}"/>
+                <h:commandButton value="Extract" action="#{calculator.cikar}"/>
+                <h:commandButton value="Multiply" action="#{calculator.carp}"/>
+                <h:commandButton value="Divide" action="#{calculator.bol}"/>
+            </div>
+            <div>
+                <h:outputLabel value="Result :"/>
+                <h:outputText value="#{calculator.sonuc}"/>
+                
+                
+            </div>
+        </h:form>
     </h:body>
 </html>
 
